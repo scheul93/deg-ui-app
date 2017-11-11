@@ -1,0 +1,6 @@
+<div class="text-results">
+  Total Results: {{listOfResults.length}}
+</div>
+<div *ngFor="let doctor of listOfResults">
+  <doctor [doctorInfo]="doctor"></doctor>
+</div>
