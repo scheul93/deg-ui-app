@@ -13,7 +13,7 @@ export class ZipcodeSearchComponent implements OnInit {
 
   ngOnInit() {}
 
-  searchDoctors(){
+  searchDoctors(form){
     this.searchSvc.searchDoctors();
   }
 

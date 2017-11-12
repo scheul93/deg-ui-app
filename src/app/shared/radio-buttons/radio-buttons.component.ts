@@ -17,12 +17,14 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
 })
 export class RadioButtonsComponent implements OnInit {
   @Input() options:string[];
+  @Input() defaultValue:string;
   @Output() selectionChange: EventEmitter<string> = new EventEmitter<string>();
   private selection:string;
 
   constructor() { }
 
   ngOnInit() {
+    this.selection = this.defaultValue;
   }
 
   selectionChanged(){

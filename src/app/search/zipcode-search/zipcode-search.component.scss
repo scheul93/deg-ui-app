@@ -11,4 +11,14 @@
     border-style:unset;
     border-radius: 5px;
     padding: .25em 1.5em;
+
+    &:disabled{
+        background-color:$color-grey-med;
+        opacity:.5;
+    }
+}
+
+.text-hint{
+    font-size: $font-size-12;
+    color: $color-grey-med;
 }

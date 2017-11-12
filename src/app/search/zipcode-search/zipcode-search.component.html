@@ -2,6 +2,13 @@
   Search
 </div>
 <div>
-  <input class="input-search">
-  <button class="btn-search" (click)="searchDoctors()">Search</button>
+  <form #zipcodeForm="ngForm" (ngSubmit)="searchDoctors(zipcodeForm)">
+      <div>
+          <input class="input-search" pattern="[\d]{5}" #zipcode="ngModel" name="zipcode" ngModel required>
+          <button class="btn-search" [disabled]="!zipcodeForm.form.valid">Search</button>
+      </div>
+      <div [hidden]="zipcode.valid || zipcode.pristine" class="text-hint">
+          Please enter a 5 digit zipcode.
+        </div>
+  </form>
 </div>
