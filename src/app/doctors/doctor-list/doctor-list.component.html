@@ -1,6 +1,6 @@
 <div class="text-results">
-  Total Results: {{listOfResults.length}}
+  Total Results: {{getLength()}}
 </div>
-<div *ngFor="let doctor of listOfResults" class="row">
+<div *ngFor="let doctor of listOfResults | gender:searchSvc.gender" class="row">
   <doctor [doctorInfo]="doctor"></doctor>
 </div>

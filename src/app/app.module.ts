@@ -16,6 +16,7 @@ import { DoctorComponent } from './doctors/doctor/doctor.component';
 import { SearchService } from './search/shared/search.service';
 import { HttpModule } from '@angular/http';
 import { SliderComponent } from './shared/slider/slider.component';
+import { GenderPipe } from './shared/gender.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SliderComponent } from './shared/slider/slider.component';
     RadioButtonsComponent,
     DoctorListComponent,
     DoctorComponent,
-    SliderComponent
+    SliderComponent,
+    GenderPipe
   ],
   imports: [
     BrowserModule,

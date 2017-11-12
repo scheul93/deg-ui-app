@@ -7,6 +7,7 @@ import { Doctor } from '../../doctors/shared/doctor.model';
 @Injectable()
 export class SearchService {
   public zipCode:string;
+  public gender:string;
 
   private _listOfDoctors: BehaviorSubject<Doctor[]> = new BehaviorSubject<Doctor[]>(null);
   public readonly listOfDoctors: Observable<Doctor[]> = this._listOfDoctors.asObservable();

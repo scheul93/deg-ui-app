@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { SearchService } from '../shared/search.service';
 
 @Component({
   selector: 'gender-search',
@@ -18,14 +19,18 @@ export class GenderSearchComponent implements OnInit {
   private genderOptions = ["Male", "Female", "No preference"];
   readonly DEFAULT_GENDER = "No preference";
 
-  constructor() { }
+  constructor(private searchSvc: SearchService) { }
 
   ngOnInit() {
   }
 
   updateSearch(selectedValue:string){
     //TODO: make this re-initiate search  
-    console.log(selectedValue);
+    if(selectedValue === "No preference"){
+      this.searchSvc.gender = '';
+    } else {
+      this.searchSvc.gender = selectedValue;
+    }
   }
 
 }
