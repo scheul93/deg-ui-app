@@ -16,7 +16,7 @@ $font-size-22: 22px;
 
 $font-family: 'Cabin';
 
-body{
+* {
     font-family: $font-family;
 }
 
@@ -32,4 +32,11 @@ body{
 
 .div-zipcode-search{
     background-color:$color-grey-light;
+    padding: 1em;
+    width:100%;
+}
+
+.page-content{
+    margin-left:15%;
+    margin-right:15%;
 }

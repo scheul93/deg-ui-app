@@ -14,7 +14,7 @@ export class ZipcodeSearchComponent implements OnInit {
   ngOnInit() {}
 
   searchDoctors(form){
-    this.searchSvc.searchDoctors();
+    this.searchSvc.searchDoctors(form.value.zipcode);
   }
 
 }

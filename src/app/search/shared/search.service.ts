@@ -6,16 +6,15 @@ import { Doctor } from '../../doctors/shared/doctor.model';
 
 @Injectable()
 export class SearchService {
-  private distance;
-  private gender;
-  private zipCode;
+  public zipCode:string;
 
   private _listOfDoctors: BehaviorSubject<Doctor[]> = new BehaviorSubject<Doctor[]>(null);
   public readonly listOfDoctors: Observable<Doctor[]> = this._listOfDoctors.asObservable();
 
   constructor(private http: Http) { }
 
-  searchDoctors(){
+  searchDoctors(zipCode:string){
+    this.zipCode = zipCode;
     return this.http.get('./assets/json/doctors.json').subscribe(
       data => {
         let results = data.json().results;
