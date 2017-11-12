@@ -11,12 +11,16 @@ import { ZipcodeSearchComponent } from './search/zipcode-search/zipcode-search.c
 import { RadioButtonsComponent } from './shared/radio-buttons/radio-buttons.component';
 import { DoctorListComponent } from './doctors/doctor-list/doctor-list.component';
 import { DoctorComponent } from './doctors/doctor/doctor.component';
+import { SliderComponent } from './shared/slider/slider.component';
+import { HeaderBarComponent } from './shared/header/header.component';
 
 //Services
 import { SearchService } from './search/shared/search.service';
 import { HttpModule } from '@angular/http';
-import { SliderComponent } from './shared/slider/slider.component';
+
+//Pipes
 import { GenderPipe } from './shared/gender.pipe';
+
 
 
 @NgModule({
@@ -29,7 +33,8 @@ import { GenderPipe } from './shared/gender.pipe';
     DoctorListComponent,
     DoctorComponent,
     SliderComponent,
-    GenderPipe
+    GenderPipe,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,

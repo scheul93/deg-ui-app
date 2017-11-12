@@ -74,7 +74,7 @@ describe('SliderComponent', () => {
         })
       });
 
-      it('with change in input', () => {
+      it('with change in distance', () => {
         component.min = 1;
         component.max = 5;
         component.stepSize = 1;
