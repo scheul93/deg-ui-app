@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { SearchService } from '../shared/search.service';
 
 @Component({
   selector: 'distance-search',
@@ -8,9 +9,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class DistanceSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private searchSvc: SearchService) { }
 
   ngOnInit() {
+  }
+
+  sliderChange(newSliderVal){
+    //TODO: send to service to filter list
   }
 
 }

@@ -1,0 +1,10 @@
+<input type="range" 
+  [(ngModel)]="distance"
+  [min]="min" 
+  [max]="max"
+  [step]="stepSize" 
+  class="input-slider"
+  (ngModelChange)="sendValueChange()">
+<ul class="slider-label-list">
+  <li *ngFor="let label of labelList" class="slider-label" [style.width.%]="labelWidth">{{label}}</li>
+</ul>

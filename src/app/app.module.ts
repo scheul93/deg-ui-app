@@ -15,6 +15,7 @@ import { DoctorComponent } from './doctors/doctor/doctor.component';
 //Services
 import { SearchService } from './search/shared/search.service';
 import { HttpModule } from '@angular/http';
+import { SliderComponent } from './shared/slider/slider.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HttpModule } from '@angular/http';
     ZipcodeSearchComponent,
     RadioButtonsComponent,
     DoctorListComponent,
-    DoctorComponent
+    DoctorComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

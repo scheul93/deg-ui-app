@@ -1,12 +1,9 @@
 <div>
-  <span class="label">Distance</span>
-  <input type="range">
-  <!-- <datalist id="range-values">
-    <option value="5" label="5"></option>
-    <option value="10" label="10"></option>
-    <option value="15" label="15"></option>
-    <option value="20" label="20"></option>
-    <option value="25" label="25"></option>
-    <option value="All" label="All"></option>
-  </datalist> -->
+  <span class="distance-search-label">Distance</span>
+  <div>
+    <slider [min]=5 [max]=25 [stepSize]=5 [includeAllOpt]=true (valueChange)="sliderChange($event)"></slider>
+  </div>
+  <div class="text-distance-description" *ngIf="searchSvc.zipCode">
+    Current: {{getDistance()}} miles from {{searchSvc.zipCode}}
+  </div>
 </div>
