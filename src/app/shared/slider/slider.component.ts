@@ -25,6 +25,7 @@ export class SliderComponent implements OnInit {
   }
 
   generateLabelList(){
+    this.labelList = [];
     for(let i = this.min; i <= this.max; i += this.stepSize){
       this.labelList.push(i.toString());
     }
