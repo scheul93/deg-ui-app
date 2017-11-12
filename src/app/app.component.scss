@@ -14,9 +14,20 @@ $font-size-18: 18px;
 $font-size-20: 20px;
 $font-size-22: 22px;
 
+$font-family: 'Cabin';
+
+body{
+    font-family: $font-family;
+}
+
 .img-logo{
     width:6em;
     height:6em;
+}
+
+.img-centered{
+    display:block;
+    margin:auto;
 }
 
 .div-zipcode-search{
