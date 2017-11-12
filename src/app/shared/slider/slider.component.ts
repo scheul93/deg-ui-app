@@ -31,7 +31,8 @@ export class SliderComponent implements OnInit {
     if(this.includeAllOpt){
       this.labelList.push("All");
       this.max += this.stepSize;
-      this.distance = this.labelList[this.labelList.length - 1];
+      this.distance = this.max;
+      this.sendValueChange();
     }
   }
 
