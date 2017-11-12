@@ -1,6 +1,7 @@
 import { Location } from './location.model';
 
 export class Doctor{
+    readonly DEFAULT_AVATAR = "../assets/images/avatar.png";
     public fullName: string;
     public lastName: string;
     public specialties: string[];
@@ -14,7 +15,7 @@ export class Doctor{
             this.fullName = data.fullName;
             this.lastName = data.lastName;
             this.specialties = Array.isArray(data.specialties) ? data.specialties : [ data.specialties ];
-            this.image = data.image;
+            this.image = data.image || this.DEFAULT_AVATAR;
             this.url = data.url;
             this.gender = data.gender;
             this.locations = [];

@@ -1,15 +1,21 @@
-<div style="border: 1px solid lightgrey">
-  <img class="doctor-image" [src]="doctorInfo.image">
-  <div class="doctor-name">
-    {{doctorInfo.fullName}}
+<div style="border: 1px solid lightgrey" class="grid">
+  <div class="grid__col grid__col--1-of-6">
+      <img class="doctor-image" [src]="doctorInfo.image" alt="Doctor Image">
   </div>
-  <div class="doctor-specialty" *ngFor="let s of doctorInfo.specialties">
-    {{s}}
+  <div class="grid__col grid__col--3-of-6">
+    <div class="doctor-name">
+      {{doctorInfo.fullName}}
+    </div>
+    <div class="doctor-specialty" *ngFor="let s of doctorInfo.specialties">
+      {{s}}
+    </div>
   </div>
-  <div>
-    <div *ngFor="let l of doctorInfo.locations">
-      <div class="location-name">{{l.name}}</div>
-      <div class="location-distance">{{l.distance | number:'1.1-2'}} MILES</div>
+  <div class="grid__col grid__col--2-of-6">
+    <div>
+      <div *ngFor="let l of doctorInfo.locations">
+        <div class="location-name">{{l.name}}</div>
+        <div class="location-distance">{{l.distance | number:'1.1-2'}} MILES</div>
+      </div>
     </div>
   </div>
 </div>
