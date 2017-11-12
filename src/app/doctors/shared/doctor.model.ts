@@ -18,10 +18,10 @@ export class Doctor{
             this.image = data.image || this.DEFAULT_AVATAR;
             this.url = data.url;
             this.gender = data.gender;
-            this.locations = [];
-            for(let l of data.locations){
-                this.locations.push(new Location(l));
-            }
+            data.locations = Array.isArray(data.locations) ? data.locations : [ data.locations ];
+            this.locations = data.locations.map(item => {
+                return new Location(item);
+            });
         }
     }
 }

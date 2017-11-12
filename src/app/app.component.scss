@@ -28,15 +28,22 @@ $font-family: 'Cabin';
 .img-centered{
     display:block;
     margin:auto;
+    width:100%;
 }
 
 .div-zipcode-search{
     background-color:$color-grey-light;
     padding: 1em;
-    width:100%;
+    width:97%;
 }
 
 .page-content{
     margin-left:15%;
     margin-right:15%;
+}
+
+.row{
+    margin-top:.5em;
+    margin-bottom:.5em;
+    width:100%;
 }

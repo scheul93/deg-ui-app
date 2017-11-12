@@ -1,8 +1,15 @@
 @import '../../app.component.scss';
 
+.doctor-card{
+    border-bottom: 1px solid $color-grey-med;
+    padding: .5em;
+
+}
 .doctor-image{
     height: 6em;
-    width: 5em;
+    width: 100%;
+    min-width:3em;
+    max-width:5em;
 }
 .doctor-name{
     font-size: $font-size-20;
