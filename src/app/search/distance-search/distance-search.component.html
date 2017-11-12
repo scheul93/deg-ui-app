@@ -4,6 +4,6 @@
     <slider [min]=5 [max]=25 [stepSize]=5 [includeAllOpt]=true (valueChange)="sliderChange($event)"></slider>
   </div>
   <div class="text-distance-description" *ngIf="searchSvc.zipCode">
-    Current: {{getDistance()}} miles from {{searchSvc.zipCode}}
+    Current: {{distance}} miles from {{searchSvc.zipCode}}
   </div>
 </div>

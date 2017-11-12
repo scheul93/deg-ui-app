@@ -36,7 +36,11 @@ export class SliderComponent implements OnInit {
   }
 
   sendValueChange(){
-    this.valueChange.emit(this.distance);
+    if(this.includeAllOpt && this.distance === this.max){
+      this.valueChange.emit("All");
+    } else {
+      this.valueChange.emit(this.distance);
+    }
   }
 
 }

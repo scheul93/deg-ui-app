@@ -8,6 +8,7 @@ import { SearchService } from '../shared/search.service';
   encapsulation: ViewEncapsulation.None
 })
 export class DistanceSearchComponent implements OnInit {
+  private distance:number;
 
   constructor(private searchSvc: SearchService) { }
 
@@ -15,6 +16,7 @@ export class DistanceSearchComponent implements OnInit {
   }
 
   sliderChange(newSliderVal){
+    this.distance = newSliderVal;
     //TODO: send to service to filter list
   }
 
