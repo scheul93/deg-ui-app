@@ -6,14 +6,14 @@ import { ViewEncapsulation, Component } from "@angular/core";
     `
     <div class="header">
         <div>
-            <img src="../../assets/images/gradient.png" style="width:100%">
+            <img class="img-gradient" src="../../assets/images/gradient.png">
         </div>
         <div>
             <img class="img-logo img-centered" src="../../assets/images/logo.svg">
         </div>
     </div>
     `,
-    styleUrls: ['../../app.component.scss'],
+    styleUrls: ['./header.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 
