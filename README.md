@@ -4,10 +4,16 @@ Associate Technical Exercise
 ## Running the app
 Upon first clone/download, run `npm install`
 
-Run the app with `ng serve -o`
+If wanting to use angular-cli, `npm install @angular/cli`
+
+Run the app with:
+-  `ng serve -o` (with @angular/cli installed)
+- `npm start`
 
 ## Running unit tests
-`ng test -sm=false`
+Run unit tests with:
+- `ng test -sm=false` (with @angular/cli installed)
+- `npm test`
 There are a few small unit tests for the sharable slider and radio button components.
 
 ## Running e2e tests
