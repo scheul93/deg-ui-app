@@ -30,7 +30,7 @@
     "@angular/compiler-cli": "5.0.1",
     "@angular/language-service": "5.0.1",
     "@types/jasmine": "2.5.54",
-    "@types/jasminewd2": "2.0.3",
+    "@types/jasminewd2": "2.0.8",
     "@types/node": "6.0.90",
     "codelyzer": "3.2.2",
     "jasmine-core": "2.6.4",
